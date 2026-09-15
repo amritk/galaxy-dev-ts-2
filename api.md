@@ -11,8 +11,6 @@ Complete reference of every operation, grouped by resource. See [the README](./R
   - [Update a planet](#update-a-planet)
   - [Delete a planet](#delete-a-planet)
   - [Upload an image to a planet](#upload-an-image-to-a-planet)
-- [`CelestialBodies`](#celestialbodies)
-  - [Create a celestial body](#create-a-celestial-body)
 - [`Authentication`](#authentication)
   - [Create a user](#create-a-user)
   - [Get a token](#get-a-token)
@@ -112,24 +110,6 @@ Got a crazy good photo of a planet? Share it with the world!
 
 ```ts
 const planet = await client.planets.uploadImage(1);
-```
-
-## `CelestialBodies`
-
-Celestial bodies are the planets and satellites in the Scalar Galaxy.
-
-### Create a celestial body
-
-| Direction | Type |
-| --- | --- |
-| Request | [`CelestialBodyCreateParams`](./src/resources/celestial-bodies.ts) |
-| Response | [`CelestialBody`](./src/resources/celestial-bodies.ts) |
-
-```ts
-const celestialBody = await client.celestialBodies.create({
-  name: 'Mars',
-  type: 'terrestrial',
-});
 ```
 
 ## `Authentication`

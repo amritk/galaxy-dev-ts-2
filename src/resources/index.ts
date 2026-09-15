@@ -13,7 +13,7 @@ export type {
   PlanetUploadImageResponse,
 } from './planets';
 export { CelestialBodies } from './celestial-bodies';
-export type { CelestialBody, CelestialBodyCreateParams } from './celestial-bodies';
+export type { CelestialBody } from './celestial-bodies';
 export { Authentication } from './authentication';
 export type {
   User,

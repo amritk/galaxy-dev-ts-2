@@ -178,48 +178,6 @@ const cases: {
   },
 
   {
-    operation: 'create',
-    method: 'POST',
-    path: '/celestial-bodies',
-    label: 'required params',
-    run: async () => {
-      const celestialBody = await client.celestialBodies.create({
-        name: 'Mars',
-        type: 'terrestrial',
-      });
-    },
-  },
-
-  {
-    operation: 'create',
-    method: 'POST',
-    path: '/celestial-bodies',
-    label: 'all params',
-    run: async () => {
-      const celestialBody = await client.celestialBodies.create({
-        name: 'Mars',
-        description: 'The red planet',
-        type: 'terrestrial',
-        habitabilityIndex: 0.68,
-        physicalProperties: {},
-        atmosphere: [{}],
-        discoveredAt: '1610-01-07T00:00:00Z',
-        image: 'https://cdn.scalar.com/photos/mars.jpg',
-        satellites: [
-          {
-            name: 'Phobos',
-            type: 'moon',
-          },
-        ],
-        creator: {},
-        tags: ['solar-system', 'rocky', 'explored'],
-        successCallbackUrl: 'https://example.com/webhook',
-        failureCallbackUrl: 'https://example.com/webhook',
-      });
-    },
-  },
-
-  {
     operation: 'createUser',
     method: 'POST',
     path: '/user/signup',

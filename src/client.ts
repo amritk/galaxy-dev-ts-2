@@ -38,11 +38,7 @@ import {
   type PlanetUpdateParams,
   type PlanetUploadImageParams,
 } from './resources/planets';
-import {
-  CelestialBodies,
-  type CelestialBody,
-  type CelestialBodyCreateParams,
-} from './resources/celestial-bodies';
+import { CelestialBodies, type CelestialBody } from './resources/celestial-bodies';
 import {
   Authentication,
   type User,
@@ -1055,11 +1051,7 @@ export declare namespace DemoAPIScalarGoolaxy {
     type PlanetUploadImageParams as PlanetUploadImageParams,
   };
 
-  export {
-    CelestialBodies as CelestialBodies,
-    type CelestialBody as CelestialBody,
-    type CelestialBodyCreateParams as CelestialBodyCreateParams,
-  };
+  export { CelestialBodies as CelestialBodies, type CelestialBody as CelestialBody };
 
   export {
     Authentication as Authentication,
