@@ -11,12 +11,9 @@ Complete reference of every operation, grouped by resource. See [the README](./R
   - [Update a planet](#update-a-planet)
   - [Delete a planet](#delete-a-planet)
   - [Upload an image to a planet](#upload-an-image-to-a-planet)
-- [`CelestialBodies`](#celestialbodies)
-  - [Create a celestial body](#create-a-celestial-body)
 - [`Authentication`](#authentication)
   - [Create a user](#create-a-user)
   - [Get a token](#get-a-token)
-  - [Get authenticated user](#get-authenticated-user)
 
 ## Setup
 
@@ -114,24 +111,6 @@ Got a crazy good photo of a planet? Share it with the world!
 const planet = await client.planets.uploadImage(1);
 ```
 
-## `CelestialBodies`
-
-Celestial bodies are the planets and satellites in the Scalar Galaxy.
-
-### Create a celestial body
-
-| Direction | Type |
-| --- | --- |
-| Request | [`CelestialBodyCreateParams`](./src/resources/celestial-bodies.ts) |
-| Response | [`CelestialBody`](./src/resources/celestial-bodies.ts) |
-
-```ts
-const celestialBody = await client.celestialBodies.create({
-  name: 'Mars',
-  type: 'terrestrial',
-});
-```
-
 ## `Authentication`
 
 Some endpoints are public, but some require authentication. We provide all the required endpoints to create an account and authorize yourself.
@@ -167,16 +146,4 @@ const token = await client.authentication.createToken({
   email: 'marc@scalar.com',
   password: 'i-love-scalar',
 });
-```
-
-### Get authenticated user
-
-Find yourself they say. That's what you can do here.
-
-| Direction | Type |
-| --- | --- |
-| Response | [`User`](./src/resources/authentication.ts) |
-
-```ts
-const user = await client.authentication.listMe();
 ```
