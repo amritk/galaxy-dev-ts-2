@@ -201,15 +201,6 @@ const cases: {
       });
     },
   },
-
-  {
-    operation: 'listMe',
-    method: 'GET',
-    path: '/me',
-    run: async () => {
-      const user = await client.authentication.listMe();
-    },
-  },
 ];
 
 /**

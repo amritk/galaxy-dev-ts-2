@@ -43,21 +43,6 @@ export class Authentication extends APIResource {
   createToken(body: AuthenticationCreateTokenParams, options?: RequestOptions): APIPromise<Token> {
     return this._client.post('/auth/token', { body, ...options });
   }
-
-  /**
-   * Find yourself they say. That's what you can do here.
-   *
-   * @param {RequestOptions} [options] - Options to apply to the request, such as headers and an abort signal.
-   * @returns {APIPromise<User>} OK
-   *
-   * @example
-   * ```ts
-   * const user = await client.authentication.listMe();
-   * ```
-   */
-  listMe(options?: RequestOptions): APIPromise<User> {
-    return this._client.get('/me', options);
-  }
 }
 
 /**

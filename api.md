@@ -14,7 +14,6 @@ Complete reference of every operation, grouped by resource. See [the README](./R
 - [`Authentication`](#authentication)
   - [Create a user](#create-a-user)
   - [Get a token](#get-a-token)
-  - [Get authenticated user](#get-authenticated-user)
 
 ## Setup
 
@@ -147,16 +146,4 @@ const token = await client.authentication.createToken({
   email: 'marc@scalar.com',
   password: 'i-love-scalar',
 });
-```
-
-### Get authenticated user
-
-Find yourself they say. That's what you can do here.
-
-| Direction | Type |
-| --- | --- |
-| Response | [`User`](./src/resources/authentication.ts) |
-
-```ts
-const user = await client.authentication.listMe();
 ```
